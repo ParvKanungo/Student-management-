@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<string.h>
+#include<conio.h>
 #define Data_file "stud.db"
 #define Tmp_file "tmp.db"
 typedef struct __student
@@ -13,10 +14,30 @@ void edit_student();
 void delete_student();
 void displayListOfStudents();
 void search_student();
+void getPword(char *,int);
+
+int login()
+{
+char pword[18];
+getPword(pword,sizeof(pword));
+if(strcmp(pword,"ERP2024")==0)
+{
+return 1;
+}
+else return 0;
+}
 
 int main()
 {
 int choice;
+int validateLogin;
+printf("-----------Login for the admin-------------\n");
+validateLogin=login();
+if(validateLogin==0)
+{
+printf("Password is incorrect try again!!\n");
+return 0;
+}
 do
 {
 printf("1. Add student\n");
@@ -35,6 +56,34 @@ else if(choice == 5) displayListOfStudents();
 
 }while(choice!=6);
 return 0;
+}
+
+void getPword(char *pword, int sz)
+{
+int index=0;
+char ch;
+printf("Enter password: ");
+while(index < sz-1)
+{
+ch=getch();
+if(ch=='\r')
+{
+break;
+}
+else if(ch=='\b' && index>0)
+{
+printf("\b \b");
+index--;
+}
+else if(ch!='\b')
+{
+pword[index]=ch;
+index++;
+printf("*");
+}
+}
+pword[index]='\0';
+printf("\n");
 }
 
 void add_student()
