@@ -1,4 +1,4 @@
-<ins>#Project Overview</ins>
+<ins># Project Overview</ins>
 My project is a student database management system built in C language with file-based data storage. It uses a struct/structure-based approach for data organization, allowing operations like adding, editing, deleting, and searching student records efficiently.
 <ins>#Features of the Project</ins>
 ##User Authentication:
