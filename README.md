@@ -1,6 +1,6 @@
-#<ins>Project Overview</ins>
+<ins>#Project Overview</ins>
 My project is a student database management system built in C language with file-based data storage. It uses a struct/structure-based approach for data organization, allowing operations like adding, editing, deleting, and searching student records efficiently.
-#<ins>Features of the Project</ins>
+<ins>#Features of the Project</ins>
 ##User Authentication:
 The system implements an admin login feature using password masking for secure input. The password is masked during entry, ensuring sensitive data isn't displayed on the screen, enhancing data confidentiality.
 ##Data Persistence:
@@ -13,7 +13,7 @@ Input validation is integrated to prevent invalid data entries (e.g., non-positi
 The project utilizes memory-safe operations and clears sensitive information, like passwords, from memory after use to enhance security. Additionally, the memcpy function could be integrated to overwrite any residual sensitive data in memory.
 ##Scalability:
 The use of binary files and efficient I/O operations allows the program to scale easily with the number of student records, making it adaptable for larger datasets without significantly affecting performance.
-#<ins>Future Enhancements</ins>
+<ins>#Future Enhancements</ins>
 ##Transition to Database Management System (DBMS):
 In the future, I plan to upgrade from file-based storage to a more robust relational database management system (RDBMS), such as MySQL or SQLite. This enhancement would improve data retrieval speed, enable complex querying capabilities, and provide better data consistency and security, especially for larger datasets.
 ##User Role Management and Access Control:
